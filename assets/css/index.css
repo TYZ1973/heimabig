@@ -30,6 +30,7 @@ a {
   text-align: center;
   font-size: 12px;
   user-select: none;
+  
 }
 
 .layui-side-scroll .userinfo {
@@ -56,3 +57,10 @@ a {
   margin-right: 10px;
 }
 
+.layui-side-scroll{
+  padding-top: 15px;
+  
+}
+.cang{
+  overflow: hidden;
+}
