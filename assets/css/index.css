@@ -1,3 +1,8 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
 .layui-footer {
   text-align: center;
   font-size: 12px;
@@ -18,6 +23,7 @@ iframe {
 
 .layui-body {
   overflow: hidden;
+  
 }
 
 a {
@@ -25,11 +31,12 @@ a {
 }
 
 .userinfo {
-  height: 60px;
-  line-height: 60px;
+  height: 50px;
+  line-height: 50px;
   text-align: center;
   font-size: 12px;
   user-select: none;
+  margin-left: -50px;
   
 }
 
@@ -61,6 +68,23 @@ a {
   padding-top: 15px;
   
 }
+
 .cang{
   overflow: hidden;
+}
+
+.budong{
+  /* 让顶部导航栏不乱滚动 */
+  position: fixed;
+  width: 100%;
+  
+}
+
+.layui-nav-tree .layui-nav-bar{
+
+  display: none;
+}
+
+.layui-nav-bar{
+  display: none!important;
 }

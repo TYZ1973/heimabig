@@ -10,6 +10,7 @@ $(function(){
         $('.reg-box').show()
     
 })
+
 $('#link_login').on('click',()=>{
     // $('.login-box').toggle()
     // $('.reg-box').toggle()
@@ -50,6 +51,7 @@ form.verify({
       }
 })
 
+
     $('#form_reg').on('submit',(e)=>{
         e.preventDefault()  
         $.post(
@@ -68,6 +70,8 @@ form.verify({
             })
           })
 
+
+
          $('#form_login').submit(function(e){
                 e.preventDefault();
                 $.ajax({
@@ -78,6 +82,7 @@ form.verify({
                     success :function(res){
                       if(res.status!==0){
                         return layer.msg('登录失败！！')
+                        
                       }
                       layer.msg('成功！')
                       // console.log(res.token);
@@ -89,4 +94,12 @@ form.verify({
                 })
             })
             // Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTA1OCwidXNlcm5hbWUiOiIxNzE3dHR5IiwicGFzc3dvcmQiOiIiLCJuaWNrbmFtZSI6IiIsImVtYWlsIjoiIiwidXNlcl9waWMiOiIiLCJpYXQiOjE2NzMzMzQ3MDgsImV4cCI6MTY3MzM3MDcwOH0.pIgO0yXMpHvf-WdQN7aSFWbdabPVS766qvSl_KwVV5Y
-    })
+   
+
+            $(".search").keydown(function(event) {  
+              if (event.keyCode == 13) { 
+                $('#link_login').click();
+              }  
+          })  
+   
+          })
